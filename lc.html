@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>l calci</title>
+</head>
+<body onload="myfunction()">
+<div id="myprogress">
+<div id="mybar">
+<span id="number">1</span>
+</div>
+</div>
+<button><a href="index.html">Restart</button>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-id:border-box;
+font-family::Comic Sans MS;
+
+}
+body{
+background: rgba( 0,0,0,0.2) url(lhd2.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	width:100%;
+	height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+width:100%;
+height:100vh;
+flex-direction:column;
+}
+#myprogress{
+width:75%;
+background-color:white;
+border-radius:25px;
+
+}
+#mybar{
+background-color:#03a9f4;
+border-radius:20px;
+margin:6px;
+width:2%;
+text-align:center;
+transition:2s;
+
+}
+#number{
+font-size:30px;
+color:white;
+margin:5px;
+}
+
+
+button {
+margin:50px;
+border-radius:10px;
+    transition: all .5s ease;
+    color: #fff;
+    border: 3px solid white;
+    font-family:'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color : transparent;
+    padding: 10px;
+    outline: none;
+	border-bottom-style:none;
+	cursor:pointer;
+}
+button:hover {
+    color: #001F3F;
+    background-color: #fff;
+}
+</style>
+<script>
+function myfunction(){
+var x=Math.floor((Math.random()*100));
+document.getElementById('mybar').style.width=x + '%';
+var a=document.getElementById('number');
+var counter=0;
+setInterval(()=>{
+if (counter == x){clearInterval();
+}
+else{
+counter += 1;
+a.innerHTML=counter + '%';
+}
+},22)
+}
+
+</script>
+</body>
+</html>
